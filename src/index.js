@@ -1,12 +1,12 @@
-function capitalize(str) {
+export function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-function reverseString(str) {
+export function reverseString(str) {
   return str.split('').reverse().join('');
 }
 
-function calculator(a, b, operator) {
+export function calculator(a, b, operator) {
   switch (operator) {
     case '+':
       return a + b;
@@ -19,7 +19,7 @@ function calculator(a, b, operator) {
   }
 }
 
-function caesarCipher(str, shift) {
+export function caesarCipher(str, shift) {
   return str
     .split('')
     .map((char) => {
@@ -35,7 +35,7 @@ function caesarCipher(str, shift) {
     .join('');
 }
 
-function analyzeArray(arr) {
+export function analyzeArray(arr) {
   return {
     average: arr.reduce((acc, curr) => acc + curr, 0) / arr.length,
     min: Math.min(...arr),
